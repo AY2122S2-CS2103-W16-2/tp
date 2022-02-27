@@ -8,7 +8,7 @@ We are a team based in the [School of Computing, National University of Singapor
 ## Our Team
 
 ### Ong Weng Qi
-<img src="images/chriswengqi.jpg" width="200px">
+<img src="images/chriswengqi.png" width="200px">
 
 [[github](https://github.com/chriswengqi)] [[portfolio](team/chriswengqi.md)]
 - Role: Team Lead
@@ -16,7 +16,7 @@ We are a team based in the [School of Computing, National University of Singapor
 
 ### Kaaviya Selvam
 
-<img src="images/kavxya.jpg" width="200px">
+<img src="images/kavxya.png" width="200px">
 
 [[github](http://github.com/kavxya)] [[portfolio](team/kavxya.md)]
 
@@ -33,7 +33,7 @@ We are a team based in the [School of Computing, National University of Singapor
 
 ### Wong Chee Hong
 
-<img src="images/cheehongw.jpg" width="200px">
+<img src="images/cheehongw.png" width="200px">
 
 [[github](http://github.com/cheehongw)] [[portfolio](team/cheehongw.md)]
 
@@ -41,7 +41,7 @@ We are a team based in the [School of Computing, National University of Singapor
 
 ### Wu Zihao
 
-<img src="images/zihaowrez.jpg" width="200px">
+<img src="images/zihaowrez.png" width="200px">
 
 [[github](http://github.com/zihaowrez)] [[portfolio](team/zihaowrez.md)]
 
