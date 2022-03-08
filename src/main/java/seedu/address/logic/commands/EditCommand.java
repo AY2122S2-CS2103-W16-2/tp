@@ -19,11 +19,7 @@ import seedu.address.commons.core.index.Index;
 import seedu.address.commons.util.CollectionUtil;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
-import seedu.address.model.person.Address;
-import seedu.address.model.person.Email;
-import seedu.address.model.person.Name;
-import seedu.address.model.person.Person;
-import seedu.address.model.person.Phone;
+import seedu.address.model.person.*;
 import seedu.address.model.tag.Tag;
 
 /**
@@ -97,9 +93,10 @@ public class EditCommand extends Command {
         Phone updatedPhone = editPersonDescriptor.getPhone().orElse(personToEdit.getPhone());
         Email updatedEmail = editPersonDescriptor.getEmail().orElse(personToEdit.getEmail());
         Address updatedAddress = editPersonDescriptor.getAddress().orElse(personToEdit.getAddress());
+        Remark updatedRemark = personToEdit.getRemark();
         Set<Tag> updatedTags = editPersonDescriptor.getTags().orElse(personToEdit.getTags());
 
-        return new Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedTags);
+        return new Person(updatedName, updatedPhone, updatedEmail, updatedAddress, updatedRemark, updatedTags);
     }
 
     @Override
@@ -184,6 +181,7 @@ public class EditCommand extends Command {
             return Optional.ofNullable(address);
         }
 
+
         /**
          * Sets {@code tags} to this object's {@code tags}.
          * A defensive copy of {@code tags} is used internally.
@@ -222,5 +220,7 @@ public class EditCommand extends Command {
                     && getAddress().equals(e.getAddress())
                     && getTags().equals(e.getTags());
         }
+
+
     }
 }
