@@ -14,6 +14,12 @@ targetCompatibility = JavaVersion.VERSION_11
 repositories {
     mavenCentral()
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+
+
+    maven {url "https://sandec.jfrog.io/artifactory/repo"}
+
+
+
 }
 
 checkstyle {
@@ -63,6 +69,11 @@ dependencies {
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: jUnitVersion
 
     testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: jUnitVersion
+
+    compile "com.sandec:mdfx:0.2.4"
+
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'commons-io:commons-io:2.11.0'
 }
 
 shadowJar {

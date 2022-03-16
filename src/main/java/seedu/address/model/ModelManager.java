@@ -102,6 +102,11 @@ public class ModelManager implements Model {
     }
 
     @Override
+    public void copyPerson(Person target) {
+        addressBook.copyPerson(target);
+    }
+
+    @Override
     public void addPerson(Person person) {
         addressBook.addPerson(person, "head");
         updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);

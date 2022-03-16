@@ -8,6 +8,7 @@ import java.util.List;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import seedu.address.model.ClipboardManager;
 import seedu.address.model.person.exceptions.DuplicatePersonException;
 import seedu.address.model.person.exceptions.PersonNotFoundException;
 
@@ -27,6 +28,8 @@ public class UniquePersonList implements Iterable<Person> {
     private final ObservableList<Person> internalList = FXCollections.observableArrayList();
     private final ObservableList<Person> internalUnmodifiableList =
             FXCollections.unmodifiableObservableList(internalList);
+
+    private final ClipboardManager clipboard = new ClipboardManager();
 
     /**
      * Returns true if the list contains an equivalent person as the given argument.
@@ -81,6 +84,19 @@ public class UniquePersonList implements Iterable<Person> {
         requireNonNull(toRemove);
         if (!internalList.remove(toRemove)) {
             throw new PersonNotFoundException();
+        }
+    }
+
+    /**
+     * Copies the equivalent person from the list.
+     * The person must exist in the list.
+     */
+    public void copy(Person toCopy) {
+        requireNonNull(toCopy);
+        if (!internalList.contains(toCopy)) {
+            throw new PersonNotFoundException();
+        } else {
+            clipboard.copy(toCopy);
         }
     }
 

@@ -1,5 +1,6 @@
 package seedu.address.ui;
 
+import java.io.IOException;
 import java.util.logging.Logger;
 
 import javafx.event.ActionEvent;
@@ -108,6 +109,7 @@ public class MainWindow extends UiPart<Stage> {
                 event.consume();
             }
         });
+
     }
 
     /**

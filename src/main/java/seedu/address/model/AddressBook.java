@@ -93,6 +93,10 @@ public class AddressBook implements ReadOnlyAddressBook {
         persons.remove(key);
     }
 
+    public void copyPerson(Person key) {
+        persons.copy(key);
+    }
+
     //// util methods
 
     @Override
