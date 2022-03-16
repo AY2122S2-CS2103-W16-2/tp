@@ -78,7 +78,7 @@ Format: `help`
 
 **Format:** `add n/NAME [d/{SOCIAL MEDIA PLATFORM}, {ID}]… [t/TAG]…`
 
-Tip: A person can have one or more details
+Tip: A person can have one or more details  
 Tip: A person can have zero or more tags
 
 The newly added person will be placed at the top of the contact list.
@@ -101,27 +101,34 @@ Finds persons with the given keywords.
 
 **Format:**  `[find] KEYWORD [MORE_KEYWORDS]`
 
-The keywords are compared to all fields of each person
-Persons matching at least one keyword will be returned (i.e. OR search). e.g. `Hans Bo` will return `Hans Gruber`, `Bo Yang`
-The search is case-insensitive. e.g `hans` will match `Hans`
-The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`
+If the first keyword is a command word, it will still be recognised as a command and will not be treated as keywords. The whole list will be displayed when a command word is entered.  
+  
+The keywords are compared to all fields of each person.  
+Persons matching at least one keyword will be returned (i.e. OR search). e.g. `Hans Bo` will return `Hans Gruber`, `Bo Yang`.  
+The search is case-insensitive. e.g `hans` will match `Hans`.  
+The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`.  
 
 **Examples:**
 
-`find kaaviya` (finds the name "Kaaviya")
-`Kaaviya` (does the same as above)
+`find a` will return `Alex Yeoh`, `Bernice` with the tag `colleagues`, `Lin` with the email `lin@example.com` (if these contacts exist).  
+`a` does the same as above.  
+`find alex yeoh` will return both `Alex` and `Alex Yeoh` (if both contacts exist).  
+When the user types `add`, the whole list is displayed.
+
 
 ### Deleting a person : `delete`
 
 **Format:**
 
-`delete INDEX`: Deletes the person with the specified INDEX. The index must be a positive integer 1, 2, 3, ...
-`delete NAME`: Deletes the person with the specified NAME. NAME is case-sensitive.
+`delete INDEX`: Deletes the person with the specified INDEX. The index must be a positive integer 1, 2, 3, ...  
+`delete NAME`: Deletes the person with the specified NAME. NAME must match the full name and is case-sensitive.  
 
 **Examples:**
 
-Scenario 1: `delete 2` (deletes the person with index 2)
-Scenario 2: `delete Alex Yeoh`
+`delete 2` deletes the contact at index 2.  
+`delete Alex Yeoh` deletes the contact `Alex Yeoh`.  
+`delete Alex` or `delete alex yeoh` will not delete `Alex Yeoh`.  
+
 
 ### Clearing all entries : `clear`
 
