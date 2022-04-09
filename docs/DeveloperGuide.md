@@ -432,50 +432,50 @@ Precondition - User has started up the uMessage application
 
 ### Use case 1: Add a contact
 
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 **MSS**
 1. User types in the command to add a person into the address book
 2. uMessage adds the person into the list of contacts and updates it to the user
 
 Use case ends
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 **Extensions**
 * 1a. Incorrect syntax is used
     * 1a1. uMessage displays an error message
     * 1a2. Use case resumes at step 1
       
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 
 ### Use case 2: Delete a contact
 
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 **MSS**
 1. User types in the command to delete a contact from the list
 2. uMessage removes the specified contact in the list and displays the updated list to the user
 
 Use case ends
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 **Extensions**
 * 1a. User enters an invalid syntax / a target index greater than the size of the list / a non-existing target name
     * 1a1. uMessage shows an error
     * 1a2. Use case resumes at step 1
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 
 ### Use case 3: Find Contact
 
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 **MSS**
 1. User types keyword(s) in the searchbar
 2. uMessage updates the contact list to display matching contacts
 
 Use case ends
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 **Extensions**
 * 1a. The first word the user types is a command word
     * 1a1. uMessage displays the full list
@@ -483,8 +483,7 @@ Use case ends
 * 1b. User deletes all keywords
     * 1b1. uMessage displays the full list
     * 1b2. Use case resumes at step 1
-
-//@@author zihaowrez
+<!-- @@author zihaowrez -->
 
 ### Use case 4: Copies a contact
 
