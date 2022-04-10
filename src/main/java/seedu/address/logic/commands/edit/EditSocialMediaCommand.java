@@ -25,10 +25,10 @@ public class EditSocialMediaCommand extends EditCommand {
     public static final String MESSAGE_SOCIALS_ALREADY_EXISTS = "Socials %s already exists in %s!";
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits the targeted social media of a given person. "
             + "The social media is specified by the index of list of socials of the given person.\n"
-            + "Parameters:"
-            + "PERSON_NAME/INDEX"
-            + PREFIX_INDEX + "INDEX_NUM"
-            + "[" + PREFIX_PLATFORM_NAME_FLAG + "]"
+            + "Parameters: "
+            + "PERSON_NAME/INDEX "
+            + PREFIX_INDEX + "INDEX_NUM "
+            + "[" + PREFIX_PLATFORM_NAME_FLAG + "] "
             + PREFIX_SOCIAL_MEDIA + "UPDATED_VALUE";
 
     private Target target;

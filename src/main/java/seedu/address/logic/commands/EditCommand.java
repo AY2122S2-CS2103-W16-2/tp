@@ -21,7 +21,7 @@ import seedu.address.model.tag.Tag;
 public abstract class EditCommand extends Command {
 
     public static final String COMMAND_WORD = "edit";
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits the details of the person identified "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits the details of the person identified.\n"
             + "Specify the person to edit by their fullname or "
             + "by the index number used in the displayed person list.";
 
