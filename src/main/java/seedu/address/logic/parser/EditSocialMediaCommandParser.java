@@ -12,6 +12,7 @@ import seedu.address.logic.parser.exceptions.ParseException;
 
 public class EditSocialMediaCommandParser implements Parser<EditSocialMediaCommand> {
 
+    private static final String MESSAGE_INVALID_SOCIAL_MEDIA_INDEX = "The social media index provided is invalid";
     @Override
     public EditSocialMediaCommand parse(String userInput) throws ParseException {
         requireNonNull(userInput);
@@ -33,7 +34,12 @@ public class EditSocialMediaCommandParser implements Parser<EditSocialMediaComma
         }
 
         String newSocialMedia = argMultimap.getValue(PREFIX_SOCIAL_MEDIA).get();
-        Index oneBasedIndex = ParserUtil.parseIndex(argMultimap.getValue(PREFIX_INDEX).get());
+        Index oneBasedIndex;
+        try {
+            oneBasedIndex = ParserUtil.parseIndex(argMultimap.getValue(PREFIX_INDEX).get());
+        } catch (ParseException e) {
+            throw new ParseException(MESSAGE_INVALID_SOCIAL_MEDIA_INDEX);
+        }
 
         if (argMultimap.doesPrefixesExist(PREFIX_PLATFORM_NAME_FLAG)) {
             return new EditSocialMediaCommand(target, oneBasedIndex, newSocialMedia, true);

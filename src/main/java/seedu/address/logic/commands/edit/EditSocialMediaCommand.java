@@ -23,6 +23,7 @@ public class EditSocialMediaCommand extends EditCommand {
 
     public static final String MESSAGE_EDIT_SOCIALS_SUCCESS = "Edited social media of %s: From %s to %s";
     public static final String MESSAGE_SOCIALS_ALREADY_EXISTS = "Socials %s already exists in %s!";
+    private static final String MESSAGE_INVALID_SOCIAL_MEDIA_INDEX = "The social media index provided is invalid";
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits the targeted social media of a given person. "
             + "The social media is specified by the index of list of socials of the given person.\n"
             + "Parameters: "
@@ -58,6 +59,11 @@ public class EditSocialMediaCommand extends EditCommand {
 
         Person targetPersonToEdit = target.targetPerson(lastShownList);
         List<SocialMedia> socialsToEdit = new ArrayList<>(targetPersonToEdit.getSocialMedias());
+
+        if (index.getOneBased() > socialsToEdit.size()) {
+            throw new CommandException(MESSAGE_INVALID_SOCIAL_MEDIA_INDEX);
+        }
+
         SocialMedia socialMediaToEdit = socialsToEdit.get(index.getZeroBased());
         SocialMedia updatedSocialMedia;
 
